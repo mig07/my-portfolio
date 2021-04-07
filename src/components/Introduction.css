@@ -1,0 +1,12 @@
+h1.header-title {
+    text-align: left;
+    font-size: 70px;
+}
+
+.header-subtitle {
+    text-align: left;
+}
+
+.header-container {
+    display: inline-block;
+}
