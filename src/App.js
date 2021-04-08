@@ -5,11 +5,12 @@ import NavBar from './components/Navbar';
 import { Home } from './pages/Home';
 import Projects from './pages/Project';
 import Blog from './pages/Blog';
+import Particles from 'react-particles-js';
 
 function App() {
   return (
     <div>
-      <NavBar />
+      <NavBar />      
       <Router>
         <div>
           <Switch>
