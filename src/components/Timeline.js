@@ -1,3 +1,4 @@
+import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -7,7 +8,7 @@ export default function Timeline() {
         <div>
         <Jumbotron>
             <h1>Professional Timeline</h1>
-            <VerticalTimeline animate="true">
+            <VerticalTimeline>
                 <VerticalTimelineElement
                     date="2020 - today"
                     iconStyle={{ background: '#000', color: '#fff' }}

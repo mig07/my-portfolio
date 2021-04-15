@@ -1,3 +1,4 @@
+import React from 'react';
 import './Introduction.css'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Particles from 'react-particles-js';
