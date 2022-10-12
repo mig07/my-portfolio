@@ -1,9 +1,9 @@
-h1.header-title {
+.header-title {
     text-align: left;
     font-size: 70px;
 }
 
-.header-container {
+.header-hero {
     position: relative;
     height: calc(100vh);
 }

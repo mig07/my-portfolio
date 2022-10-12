@@ -1,16 +1,16 @@
-import React from 'react';
-import About from '../components/About';
-import Contact from '../components/Contact';
-import Introduction from '../components/Introduction';
-import Skills from '../components/Skills';
-import TimeLine from '../components/Timeline';
+import React from "react";
+import Contact from "../components/Contact";
+import Introduction from "../components/Introduction";
+import Skills from "../components/Skills";
+import TimeLine from "../components/Timeline";
 
-export const Home = () => (
+export default function Home() {
+  return (
     <div>
-        <Introduction />
-        <About />
-        <TimeLine />
-        <Skills />
-        <Contact />
+      <Introduction />
+      <TimeLine />
+      <Skills />
+      <Contact />
     </div>
-)
+  );
+}

@@ -1,42 +1,15 @@
-import React from 'react';
-import './Introduction.css'
-import Jumbotron from 'react-bootstrap/Jumbotron'
-import Particles from 'react-particles-js';
+import React from "react";
+import "./Introduction.css";
 
 export default function Introduction() {
-    return (
-        <div className="header-container">
-            <div className="header-text-container">
-                <h1 className='header-title'>Hello World!</h1>
-                <h1 className='header-title'>I'm Miguel Luís</h1>
-                <h3 className='header-subtitle'>I'm a software engineer and a MSc computer engineering student</h3>
-                <h4 className='header-subtitle'>Welcome to my web portfolio!</h4>
-            </div>
-            {/* <div className="wrapper">
-                <Particles
-                    params={{
-                        "particles": {
-                            "number": {
-                                "value": 50
-                            },
-                            "size": {
-                                "value": 7
-                            },
-                            "interactivity": {
-                                "events": {
-                                    "onhover": {
-                                        "enable": true,
-                                        "mode": "repulse"
-                                    }
-                                }
-                            },
-                            "links": {
-                                "color": "#000000"
-                            }
-                        },
-                    }}                
-                />
-            </div> */}
-        </div>
-    )
+  return (
+    <div className="header-hero">
+      <div className="header-text-container">
+        <h6 className="header-subtitle">Hello, my name is</h6>
+        <h1 className="header-title">Miguel Luís</h1>
+        <h5 className="header-subtitle">I am a software engineer</h5>
+        <h5 className="header-subtitle">Welcome to my web portfolio!</h5>
+      </div>
+    </div>
+  );
 }
