@@ -1,49 +1,54 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Container, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-export default function NavBar() {
-  const ThemeSwitch = () => {
+export default function NavBar({ children }) {
+  const SocialButton = ({ href, src }) => {
     return (
-      <Form>
-        <Form.Check type="switch" id="theme-switch" />
-      </Form>
+      <a href={href}>
+        <img src={src} style={{ marginLeft: "5mm" }} />
+      </a>
     );
   };
 
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">@mig07</Navbar.Brand>
-        <Nav fill variant="pills">
+        <Navbar.Brand as={Link} to="/">
+          @mig07
+        </Navbar.Brand>
+        <Nav fill variant="pills" defaultActiveKey={"home"}>
           <Nav.Item>
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link eventKey="home" as={Link} to="/">
+              Home
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/project">Projects</Nav.Link>
+            <Nav.Link eventKey="projects" as={Link} to="/project">
+              Projects
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/blog">Blog</Nav.Link>
+            <Nav.Link eventKey="blog" as={Link} to="/blog">
+              Blog
+            </Nav.Link>
           </Nav.Item>
         </Nav>
         <Nav fill>
+          <Nav.Item>{children}</Nav.Item>
           <Nav.Item>
-            <ThemeSwitch />
+            <SocialButton
+              href="https://www.linkedin.com/in/miguel-lu%C3%ADs-327b06152/"
+              src="/images/Linkedin.svg"
+            />
           </Nav.Item>
           <Nav.Item>
-            <a href="https://www.linkedin.com/in/miguel-lu%C3%ADs-327b06152/">
-              <img
-                src="/images/Linkedin.svg"
-                style={{ marginLeft: "5mm" }}
-              ></img>
-            </a>
-          </Nav.Item>
-          <Nav.Item>
-            <a href="https://github.com/mig07">
-              <img src="/images/GitHub.svg" style={{ marginLeft: "5mm" }}></img>
-            </a>
+            <SocialButton
+              href="https://github.com/mig07"
+              src="/images/GitHub.svg"
+            />
           </Nav.Item>
         </Nav>
       </Container>
