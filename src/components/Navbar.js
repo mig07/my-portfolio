@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "react-bootstrap/Navbar";
+import { Container } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
-import { Container, Form } from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 
 export default function NavBar({ children }) {
@@ -17,7 +17,7 @@ export default function NavBar({ children }) {
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand as={Link} to="/">
-          @mig07
+          mig07
         </Navbar.Brand>
         <Nav fill variant="pills" defaultActiveKey={"home"}>
           <Nav.Item>

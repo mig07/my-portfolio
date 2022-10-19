@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const dayTheme = {
-  body: "#fff",
+  body: "#E5E7EB",
   fontColor: "#000",
 };
 
