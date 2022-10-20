@@ -5,8 +5,8 @@
 
 .container {
   position: relative;
-  text-align: center;
-  color: black;
+  text-align: left;
+  align-items: center;
 }
 
 .centered {
@@ -20,13 +20,13 @@ hr.solid {
   border-top: 3px solid #bbb;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway';
 }
 
 * {
- font-family: 'Raleway';
- text-align: center;
+ font-family: 'Roboto';
+ text-align: left;
 }
 
 .VerticalTimelineElement {

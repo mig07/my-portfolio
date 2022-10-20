@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
-import { Form } from "react-bootstrap";
+import { ButtonGroup, Dropdown, DropdownButton, Stack } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import "./App.css";
@@ -15,12 +15,23 @@ const StyledApp = styled.div`
 `;
 
 export default function App() {
-  const chosenTheme = localStorage.getItem("theme") || "dayTheme";
+  const themeOptions = ["Light", "Dark", "System"];
 
-  const [theme, setTheme] = useState(chosenTheme);
+  const clientSystemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+    .matches
+    ? "dark"
+    : "light";
 
-  const onThemeChange = () => {
-    theme === "dayTheme" ? setTheme("nightTheme") : setTheme("dayTheme");
+  const currentTheme = localStorage.getItem("theme") || clientSystemTheme;
+
+  const [theme, setTheme] = useState(currentTheme);
+
+  const onThemeChange = (theme) => {
+    console.log(theme);
+    if (theme === "system") {
+      return setTheme(clientSystemTheme);
+    }
+    return setTheme(theme);
   };
 
   useEffect(() => {
@@ -28,29 +39,33 @@ export default function App() {
   }, [theme]);
 
   return (
-    <ThemeProvider theme={theme === "dayTheme" ? dayTheme : nightTheme}>
+    <ThemeProvider theme={theme === "light" ? dayTheme : nightTheme}>
       <GlobalStyles />
-      <StyledApp>
-        <Router>
-          <NavBar>
-            <Form>
-              <Form.Check
-                type="switch"
-                id="theme-switch"
-                checked={theme === "nightTheme"}
-                onChange={() => onThemeChange()}
-              />
-            </Form>
+      <Router>
+        <Stack gap={3}>
+          <NavBar theme={theme}>
+            <DropdownButton
+              as={ButtonGroup}
+              key="Theme button"
+              id={"theme-dropdown"}
+              variant="Primary"
+              title="Theme"
+              onSelect={onThemeChange}
+            >
+              {themeOptions.map((theme) => (
+                <Dropdown.Item eventKey={theme.toLowerCase()}>
+                  {theme}
+                </Dropdown.Item>
+              ))}
+            </DropdownButton>
           </NavBar>
-          <div>
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/project" element={<Projects />} />
-              <Route path="/blog" element={<Blog />} />
-            </Routes>
-          </div>
-        </Router>
-      </StyledApp>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/project" element={<Projects />} />
+            <Route path="/blog" element={<Blog />} />
+          </Routes>
+        </Stack>
+      </Router>
     </ThemeProvider>
   );
 }

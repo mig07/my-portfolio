@@ -3,23 +3,25 @@ import { Container } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
-export default function NavBar({ children }) {
-  const SocialButton = ({ href, src }) => {
+export default function NavBar({ theme, children }) {
+  const SocialButton = ({ href, icon }) => {
     return (
       <a href={href}>
-        <img src={src} style={{ marginLeft: "5mm" }} />
+        <div flex>{icon}</div>
       </a>
     );
   };
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg={theme} expand="lg">
       <Container fluid>
-        <Navbar.Brand as={Link} to="/">
-          mig07
-        </Navbar.Brand>
-        <Nav fill variant="pills" defaultActiveKey={"home"}>
+        <Nav fill variant="pills" navbar={theme} defaultActiveKey={"home"}>
+          <Navbar.Brand as={Link} to="/">
+            mig07
+          </Navbar.Brand>
           <Nav.Item>
             <Nav.Link eventKey="home" as={Link} to="/">
               Home
@@ -40,14 +42,14 @@ export default function NavBar({ children }) {
           <Nav.Item>{children}</Nav.Item>
           <Nav.Item>
             <SocialButton
-              href="https://www.linkedin.com/in/miguel-lu%C3%ADs-327b06152/"
-              src="/images/Linkedin.svg"
+              href="https://www.linkedin.com/in/mig07"
+              icon={<LinkedInIcon />}
             />
           </Nav.Item>
           <Nav.Item>
             <SocialButton
               href="https://github.com/mig07"
-              src="/images/GitHub.svg"
+              icon={<GitHubIcon />}
             />
           </Nav.Item>
         </Nav>

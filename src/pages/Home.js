@@ -1,16 +1,21 @@
 import React from "react";
-import Contact from "../components/Contact";
-import Introduction from "../components/Introduction";
-import Skills from "../components/Skills";
-import TimeLine from "../components/Timeline";
+import { Container, Stack } from "react-bootstrap";
+import Hero from "../sections/Hero";
+import About from "../sections/AboutMe";
+import Bio from "../sections/Bio";
+import Skills from "../sections/Skills";
+import Contact from "../sections/ContactMe";
 
 export default function Home() {
   return (
-    <div>
-      <Introduction />
-      <TimeLine />
-      <Skills />
-      <Contact />
-    </div>
+    <Container fluid="md">
+      <Stack gap={3}>
+        <Hero />
+        <About />
+        <Bio />
+        <Skills />
+        <Contact />
+      </Stack>
+    </Container>
   );
 }
