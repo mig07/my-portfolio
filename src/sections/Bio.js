@@ -6,7 +6,7 @@ import BioItem from "../components/BioItem";
 export default function Bio() {
   return (
     <Section title="Bio">
-      <Stack gap={1}>
+      <Stack gap={4}>
         <BioItem
           year={"2020 - 2022"}
           title={"MSc Computer Science and Engineering"}

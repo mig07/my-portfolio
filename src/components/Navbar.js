@@ -16,10 +16,10 @@ export default function NavBar({ theme, children }) {
   };
 
   return (
-    <Navbar bg={theme} expand="lg">
+    <Navbar bg={theme} variant={theme}>
       <Container fluid>
         <Nav fill variant="pills" navbar={theme} defaultActiveKey={"home"}>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand eventKey="home" as={Link} to="/">
             mig07
           </Navbar.Brand>
           <Nav.Item>

@@ -3,12 +3,6 @@
   font-weight: 400;
 }
 
-.container {
-  position: relative;
-  text-align: left;
-  align-items: center;
-}
-
 .centered {
   position: relative;
   top: 50%;
@@ -24,9 +18,24 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway';
 }
 
+.underline span {
+  font-family: 'Raleway';
+  font-weight: bold;
+  display: inline-block;
+}
+
+.underline span::after
+{
+  content: '';
+  height: 7px;
+  background: #57c4d0 ;
+  border-radius: 5px;
+  display: block
+}
+
 * {
  font-family: 'Roboto';
- text-align: left;
+ align-items: center;
 }
 
 .VerticalTimelineElement {
