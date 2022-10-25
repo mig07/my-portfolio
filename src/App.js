@@ -23,7 +23,6 @@ export default function App() {
   const [theme, setTheme] = useState(currentTheme);
 
   const onThemeChange = (theme) => {
-    console.log(theme);
     if (theme === "system") {
       return setTheme(clientSystemTheme);
     }
@@ -52,7 +51,7 @@ export default function App() {
             ))}
           </NavDropdown>
         </NavBar>
-        <Container fluid="sm">
+        <Container fluid="lg">
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/project" element={<Projects />} />

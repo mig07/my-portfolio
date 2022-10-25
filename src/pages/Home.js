@@ -8,12 +8,14 @@ import Contact from "../sections/ContactMe";
 
 export default function Home() {
   return (
-    <Stack gap={3}>
-      <Hero />
-      <About />
-      <Bio />
-      <Skills />
-      <Contact />
-    </Stack>
+    <div style={{ "margin-top": 50 }}>
+      <Stack gap={3}>
+        <Hero />
+        <About />
+        <Bio />
+        <Skills />
+        {/* <Contact /> */}
+      </Stack>
+    </div>
   );
 }

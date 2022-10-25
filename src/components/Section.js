@@ -4,10 +4,10 @@ import { Button, Container, Stack } from "react-bootstrap";
 export default function Section({ title, children }) {
   return (
     <Stack gap={3}>
-      <h4 class="underline">
+      <h3 class="underline">
         <span>{title}</span>
-      </h4>
-      <div>{children}</div>
+      </h3>
+      {children}
     </Stack>
   );
 }
