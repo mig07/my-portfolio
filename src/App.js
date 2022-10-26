@@ -4,9 +4,11 @@ import { Container, Dropdown, NavDropdown } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import "./App.css";
+import Footer from "./components/Footer";
 import NavBar from "./components/Navbar";
 import Blog from "./pages/Blog";
 import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 import Projects from "./pages/Project";
 import { dayTheme, GlobalStyles, nightTheme } from "./themes.js";
 
@@ -51,12 +53,14 @@ export default function App() {
             ))}
           </NavDropdown>
         </NavBar>
-        <Container fluid="lg">
+        <Container fluid="lg" style={{ "margin-top": 75, "margin-bottom": 50 }}>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/project" element={<Projects />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
+          <Footer />
         </Container>
       </Router>
     </ThemeProvider>
