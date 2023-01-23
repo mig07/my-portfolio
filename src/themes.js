@@ -1,15 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
-export const dayTheme = {
-  primary: "#FB7237",
-  secondary: "#FB8E5F",
-  dark: "#AF4F26",
+export const lightTheme = {
+  name: "light",
   body: "#FFF",
   fontColor: "#000",
 };
 
-export const nightTheme = {
-  body: "#000",
+export const darkTheme = {
+  name: "dark",
+  body: "#202124",
   fontColor: "#FFF",
 };
 
@@ -21,5 +20,6 @@ export const GlobalStyles = createGlobalStyle`
 
   navbar {
     color: ${(props) => props.theme.fontColor};
+    border: ${(props) => props.theme.fontColor};
   }
 `;

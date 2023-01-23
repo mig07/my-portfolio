@@ -22,7 +22,7 @@ export default function About() {
           I hold a Bachelor's degree in Computer Science and Engineering.
           Currently I am a finalist student of the Master's degree in Computer
           Science and Engineering, at Instituto Superior de Engenharia de Lisboa
-          (ISEL), in the Polytechnic Institute of Lisbon.
+          (ISEL), in Instituto Politécnico de Lisboa.
         </p>
         <p>
           I consider myself a very eager person when it comes to learn new

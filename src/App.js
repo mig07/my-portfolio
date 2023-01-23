@@ -3,29 +3,33 @@ import React, { useEffect, useState } from "react";
 import { Container, Dropdown, NavDropdown } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import "./App.css";
+import "./App.scss";
 import Footer from "./components/Footer";
 import NavBar from "./components/Navbar";
 import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Projects from "./pages/Project";
-import { dayTheme, GlobalStyles, nightTheme } from "./themes.js";
+import { lightTheme, GlobalStyles, darkTheme } from "./themes.js";
 
 export default function App() {
-  const themeOptions = ["Light", "Dark", "System"];
+  const themes = {
+    light: "light",
+    dark: "dark",
+    system: "system",
+  };
 
   const clientSystemTheme = window.matchMedia("(prefers-color-scheme: dark)")
     .matches
-    ? "dark"
-    : "light";
+    ? themes.dark
+    : themes.light;
 
   const currentTheme = localStorage.getItem("theme") || clientSystemTheme;
 
   const [theme, setTheme] = useState(currentTheme);
 
   const onThemeChange = (theme) => {
-    if (theme === "system") {
+    if (theme === themes.system) {
       return setTheme(clientSystemTheme);
     }
     return setTheme(theme);
@@ -36,19 +40,19 @@ export default function App() {
   }, [theme]);
 
   return (
-    <ThemeProvider theme={theme === "light" ? dayTheme : nightTheme}>
+    <ThemeProvider theme={theme === themes.light ? lightTheme : darkTheme}>
       <GlobalStyles />
       <Router>
-        <NavBar theme={theme}>
+        <NavBar>
           <NavDropdown
             id={"theme-dropdown"}
             menuVariant={theme}
             title="Theme"
             onSelect={onThemeChange}
           >
-            {themeOptions.map((theme) => (
-              <Dropdown.Item eventKey={theme.toLowerCase()}>
-                {theme}
+            {Object.values(themes).map((theme) => (
+              <Dropdown.Item eventKey={theme}>
+                {theme.charAt(0).toUpperCase() + theme.slice(1)}
               </Dropdown.Item>
             ))}
           </NavDropdown>

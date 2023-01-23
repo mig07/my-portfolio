@@ -1,5 +1,7 @@
+// Defaults and auxiliar css
+
 .font-link {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 400;
 }
 
@@ -14,25 +16,29 @@ hr.solid {
   border-top: 3px solid #bbb;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway";
 }
 
 .underline span {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: bold;
   display: inline-block;
 }
 
-.underline span::after
-{
-  content: '';
+.underline span::after {
+  content: "";
   height: 7px;
-  background: #57c4d0 ;
   border-radius: 5px;
-  display: block
+  display: block;
+  background: #57c4d0;
 }
 
 * {
- font-family: 'Roboto';
+  font-family: "Roboto";
 }
