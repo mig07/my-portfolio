@@ -8,14 +8,6 @@ import { useTheme } from "styled-components";
 export default function NavBar({ children }) {
   const theme = useTheme().name;
 
-  const SocialButton = ({ href, icon }) => {
-    return (
-      <a href={href}>
-        <div flex>{icon}</div>
-      </a>
-    );
-  };
-
   return (
     <Navbar collapseOnSelect bg={theme} expand={"lg"} variant={theme}>
       <Container>
@@ -42,19 +34,20 @@ export default function NavBar({ children }) {
             </Nav.Item>
           </Nav>
           <Nav>
-            <Nav.Item>{children}</Nav.Item>
-            {/* <Nav.Item>
-              <SocialButton
+            <Nav.Item>
+              <Nav.Link
+                eventKey="linkedin"
                 href="https://www.linkedin.com/in/mig07"
-                icon={<LinkedInIcon />}
-              />
+              >
+                <i class="bi bi-linkedin" />
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <SocialButton
-                href="https://github.com/mig07"
-                icon={<GitHubIcon />}
-              />
-            </Nav.Item> */}
+              <Nav.Link eventKey="github" href="https://github.com/mig07">
+                <i class="bi bi-github" />
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>{children}</Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

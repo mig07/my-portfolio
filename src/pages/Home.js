@@ -1,21 +1,19 @@
 import React from "react";
 import { Stack } from "react-bootstrap";
-import Hero from "../sections/Hero";
 import About from "../sections/AboutMe";
 import Education from "../sections/Education";
-import Skills from "../sections/Skills";
-import Contact from "../sections/ContactMe";
+import Hero from "../sections/Hero";
 import Scholarships from "../sections/Scholarships";
+import Skills from "../sections/Skills";
 
 export default function Home() {
   return (
     <Stack gap={3}>
       <Hero />
       <About />
-      <Scholarships />
       <Education />
+      <Scholarships />
       <Skills />
-      {/* <Contact /> */}
     </Stack>
   );
 }

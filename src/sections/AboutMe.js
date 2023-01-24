@@ -15,14 +15,12 @@ export default function About() {
     <Section title="About me">
       <div>
         <p>
-          I am a {getAge("07/07/1998")}-year-old computer engineer and software
-          developer based in Lisbon, Portugal.
+          I am a {getAge("07/07/1998")}-year-old software engineer based in
+          Lisbon, Portugal.
         </p>
         <p>
-          I hold a Bachelor's degree in Computer Science and Engineering.
-          Currently I am a finalist student of the Master's degree in Computer
-          Science and Engineering, at Instituto Superior de Engenharia de Lisboa
-          (ISEL), in Instituto Politécnico de Lisboa.
+          I hold a Bachelor's degree and a Master's degree, both in Computer
+          Science and Engineering.
         </p>
         <p>
           I consider myself a very eager person when it comes to learn new
@@ -30,9 +28,13 @@ export default function About() {
           keeps me learning new things everyday, being this one of the reasons
           why I followed my academic education in Computer Science.
         </p>
-        <h6>
+        <p>
+          Currently I am looking for job opportunities in full-stack software
+          engineering.
+        </p>
+        <h5>
           <b>Hobbies</b>
-        </h6>
+        </h5>
         <p>Travelling, PC building, 3D printing, Linux, cycling and running.</p>
       </div>
     </Section>

@@ -22,11 +22,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway";
+  font-family: "Cabin";
 }
 
 .underline span {
-  font-family: "Raleway";
+  font-family: "Cabin";
   font-weight: bold;
   display: inline-block;
 }
@@ -37,8 +37,26 @@ h6 {
   border-radius: 5px;
   display: block;
   background: #57c4d0;
+  animation-name: "underline-animation";
+  animation-duration: 500ms;
+}
+
+@keyframes underline-animation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes bar-animation {
+  from {
+    width: 0%;
+  }
 }
 
 * {
-  font-family: "Roboto";
+  font-family: "Nunito";
+  font-weight: 600;
 }

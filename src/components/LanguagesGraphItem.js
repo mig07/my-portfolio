@@ -8,6 +8,8 @@ export default function LanguageGraphItem({ name, proficiency, color }) {
       borderRadius: 50,
       textAlign: "right",
       border: "1px solid black",
+      animationName: "bar-animation",
+      animationDuration: "1s",
     };
 
     return <div style={barStyle}></div>;

@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
-import { Container, Dropdown, NavDropdown } from "react-bootstrap";
+import { Button, Container, Nav } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import "./App.scss";
@@ -10,13 +10,12 @@ import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Projects from "./pages/Project";
-import { lightTheme, GlobalStyles, darkTheme } from "./themes.js";
+import { darkTheme, GlobalStyles, lightTheme } from "./themes.js";
 
 export default function App() {
   const themes = {
     light: "light",
     dark: "dark",
-    system: "system",
   };
 
   const clientSystemTheme = window.matchMedia("(prefers-color-scheme: dark)")
@@ -28,11 +27,8 @@ export default function App() {
 
   const [theme, setTheme] = useState(currentTheme);
 
-  const onThemeChange = (theme) => {
-    if (theme === themes.system) {
-      return setTheme(clientSystemTheme);
-    }
-    return setTheme(theme);
+  const onThemeChange = () => {
+    return setTheme(theme === themes.light ? themes.dark : themes.light);
   };
 
   useEffect(() => {
@@ -44,18 +40,15 @@ export default function App() {
       <GlobalStyles />
       <Router>
         <NavBar>
-          <NavDropdown
-            id={"theme-dropdown"}
-            menuVariant={theme}
-            title="Theme"
-            onSelect={onThemeChange}
-          >
-            {Object.values(themes).map((theme) => (
-              <Dropdown.Item eventKey={theme}>
-                {theme.charAt(0).toUpperCase() + theme.slice(1)}
-              </Dropdown.Item>
-            ))}
-          </NavDropdown>
+          <Nav.Item onClick={onThemeChange}>
+            <button class={`btn btn-${theme}`}>
+              {theme === themes.light ? (
+                <i class="bi bi-sun-fill"></i>
+              ) : (
+                <i class="bi bi-moon-stars-fill"></i>
+              )}
+            </button>
+          </Nav.Item>
         </NavBar>
         <Container fluid="lg" style={{ "margin-top": 75, "margin-bottom": 50 }}>
           <Routes>
