@@ -1,8 +1,8 @@
 import React from "react";
 import { Stack } from "react-bootstrap";
+import Section from "../components/Section";
 import SectionItem from "../components/SectionItem";
 import SectionItemIcon from "../components/SectionItemIcon";
-import Section from "../components/Section";
 import IselIcon from "../imgs/isel.svg";
 
 export default function Bio() {
@@ -17,11 +17,11 @@ export default function Bio() {
       <Stack gap={3} style={{ alignItems: "center" }}>
         <SectionItem
           icon={<IselBioIcon />}
-          duration={"October, 2020 - December, 2022"}
           title={"MSc in Computer Science and Engineering"}
           subtitle={"ISEL: Instituto Superior de Engenharia de Lisboa"}
           description={
             <>
+              <p>October, 2020 - December, 2022</p>
               <p>
                 My final thesis project was an integration framework for
                 phylogenetic tools, titled{" "}
@@ -50,11 +50,11 @@ export default function Bio() {
         />
         <SectionItem
           icon={<IselBioIcon />}
-          duration={"September, 2016 - September, 2020"}
           title={"BSc in Computer Science and Engineering"}
           subtitle={"ISEL: Instituto Superior de Engenharia de Lisboa"}
           description={
             <>
+              <p>September, 2016 - September, 2020</p>
               <p>
                 My final project was a group project in which we built a
                 multi-platform application for diabetics and nutrition, titled{" "}

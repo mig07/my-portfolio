@@ -3,7 +3,7 @@ import SectionItem from "../components/SectionItem";
 import SectionItemIcon from "../components/SectionItemIcon";
 import InescIcon from "../imgs/INESC-ID.svg";
 
-export default function Career() {
+export default function Scholarships() {
   return (
     <Section title={"Scholarships"}>
       <SectionItem
@@ -18,7 +18,7 @@ export default function Career() {
         subtitle={
           "INESC-ID: Instituto de Engenharia de Sistemas e Computadores: Investigação e Desenvolvimento em Lisboa"
         }
-        duration={"December, 2021 - June, 2022"}
+        description={"December, 2021 - June, 2022"}
       />
     </Section>
   );

@@ -5,6 +5,7 @@ import Hero from "../sections/Hero";
 import Education from "../sections/Education";
 import Scholarships from "../sections/Scholarships";
 import Skills from "../sections/Skills";
+import Publications from "../sections/Publications";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <About />
       <Education />
       <Scholarships />
+      <Publications />
       <Skills />
     </Stack>
   );
