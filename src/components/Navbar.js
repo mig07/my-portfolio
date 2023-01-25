@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
@@ -23,11 +23,6 @@ export default function NavBar({ children }) {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="projects" as={Link} to="/project">
-                Projects
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
               <Nav.Link eventKey="blog" as={Link} to="/blog">
                 Blog
               </Nav.Link>
@@ -45,6 +40,14 @@ export default function NavBar({ children }) {
             <Nav.Item>
               <Nav.Link eventKey="github" href="https://github.com/mig07">
                 <i class="bi bi-github" />
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link
+                eventKey="source"
+                href="https://github.com/mig07/my-portfolio"
+              >
+                <i class="bi bi-braces" />
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>{children}</Nav.Item>

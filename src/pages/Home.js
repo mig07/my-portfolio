@@ -1,8 +1,8 @@
 import React from "react";
 import { Stack } from "react-bootstrap";
 import About from "../sections/AboutMe";
-import Education from "../sections/Education";
 import Hero from "../sections/Hero";
+import Education from "../sections/Education";
 import Scholarships from "../sections/Scholarships";
 import Skills from "../sections/Skills";
 

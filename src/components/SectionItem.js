@@ -1,4 +1,4 @@
-import { Container, Stack } from "react-bootstrap";
+import { Stack } from "react-bootstrap";
 
 export default function SectionItem({
   icon,

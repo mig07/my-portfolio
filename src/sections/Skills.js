@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row, Stack } from "react-bootstrap";
+import { Col, Row, Stack } from "react-bootstrap";
 import LanguageGraph from "../components/LanguageGraph";
 import Section from "../components/Section";
 
@@ -61,9 +61,10 @@ export default function Skills() {
                   </h4>
                   <Stack gap={2}>
                     <h6>Cloud computing</h6>
-                    <h6>Cibersecurity</h6>
-                    <h6>Concurrency</h6>
-                    <h6>Network</h6>
+                    <h6>REST APIs</h6>
+                    <h6>Cybersecurity</h6>
+                    <h6>Mobile device programming</h6>
+                    <h6>Computer networks</h6>
                     <h6>Linux</h6>
                   </Stack>
                 </Col>
@@ -75,7 +76,7 @@ export default function Skills() {
                   <Stack gap={2}>
                     <h6>Git</h6>
                     <h6>LaTeX</h6>
-                    <h6>IntelliJ IDEA</h6>
+                    <h6>JetBrains IDEs</h6>
                     <h6>Visual Studio Code</h6>
                     <h6>NeoVim</h6>
                   </Stack>
