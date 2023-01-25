@@ -39,17 +39,18 @@ export default function App() {
       <GlobalStyles />
       <Router>
         <NavBar>
-          <Nav.Item onClick={onThemeChange}>
-            <button class={`btn btn-${theme}`}>
-              {theme === themes.light ? (
-                <i class="bi bi-sun-fill"></i>
-              ) : (
-                <i class="bi bi-moon-stars-fill"></i>
-              )}
-            </button>
-          </Nav.Item>
+          <Nav.Link onClick={onThemeChange} className="mx-2">
+            {theme === themes.light ? (
+              <i class="bi bi-sun-fill"></i>
+            ) : (
+              <i class="bi bi-moon-stars-fill"></i>
+            )}
+          </Nav.Link>
         </NavBar>
-        <Container fluid="lg" style={{ "margin-top": 75, "margin-bottom": 50 }}>
+        <Container
+          fluid="lg"
+          style={{ "margin-top": 125, "margin-bottom": 50 }}
+        >
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
