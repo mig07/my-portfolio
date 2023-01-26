@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
-import { Button, Container, Nav } from "react-bootstrap";
+import { Container, Nav } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import "./App.css";
@@ -41,16 +41,13 @@ export default function App() {
         <NavBar>
           <Nav.Link onClick={onThemeChange} className="mx-2">
             {theme === themes.light ? (
-              <i class="bi bi-sun-fill"></i>
+              <i className="bi bi-sun-fill"></i>
             ) : (
-              <i class="bi bi-moon-stars-fill"></i>
+              <i className="bi bi-moon-stars-fill"></i>
             )}
           </Nav.Link>
         </NavBar>
-        <Container
-          fluid="lg"
-          style={{ "margin-top": 125, "margin-bottom": 50 }}
-        >
+        <Container fluid="lg" style={{ marginTop: 125, marginBottom: 50 }}>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />

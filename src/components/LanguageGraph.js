@@ -7,6 +7,7 @@ export default function LanguageGraph({ graphData }) {
     <Stack gap={3}>
       {graphData.map((graphItem) => (
         <LanguageGraphItem
+          key={graphItem.name}
           name={graphItem.name}
           proficiency={graphItem.proficiency}
           color={graphItem.color}

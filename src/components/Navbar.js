@@ -17,49 +17,49 @@ export default function NavBar({ children }) {
       style={{ backdropFilter: "blur(10px)" }}
     >
       <Container>
-        <Navbar.Brand eventKey="home" as={Link} to="/">
+        <Navbar.Brand eventkey="home" as={Link} to="/">
           mig07
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav navbar={theme} defaultActiveKey={"home"}>
-            <Nav.Link eventKey="home" as={Link} to="/">
+            <Nav.Link eventkey="home" as={Link} to="/">
               Home
             </Nav.Link>
-            <Nav.Link eventKey="blog" as={Link} to="/blog">
+            <Nav.Link eventkey="blog" as={Link} to="/blog">
               Blog
             </Nav.Link>
           </Nav>
           <Nav navbar={theme} className="flex-row ms-auto">
             <Nav.Link
-              eventKey="linkedin"
+              eventkey="linkedin"
               href="https://www.linkedin.com/in/mig07"
               className="mx-2"
             >
-              <i class="bi bi-linkedin" />
+              <i className="bi bi-linkedin" />
             </Nav.Link>
             <Nav.Link
-              eventKey="email"
+              eventkey="email"
               href="mailto:miguelfpluis@outlook.com"
               className="mx-2"
             >
-              <i class="bi bi-envelope-at-fill"></i>
+              <i className="bi bi-envelope-at-fill"></i>
             </Nav.Link>
             <Nav.Link
-              eventKey="github"
+              eventkey="github"
               href="https://github.com/mig07"
               className="mx-2"
             >
-              <i class="bi bi-github" />
+              <i className="bi bi-github" />
             </Nav.Link>
             <Nav.Link
-              eventKey="source"
+              eventkey="source"
               href="https://github.com/mig07/my-portfolio"
               className="mx-2"
             >
-              <i class="bi bi-braces" />
+              <i className="bi bi-braces" />
             </Nav.Link>
-            <div class="vr mx-2"></div>
+            <div className="vr mx-2"></div>
             {children}
           </Nav>
         </Navbar.Collapse>

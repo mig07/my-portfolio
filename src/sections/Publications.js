@@ -31,7 +31,7 @@ export default function Publications() {
         }
       />
       <SectionItem
-        title={"FLOWViZ: Framework for Phylogenetic Processing (arxiv.org)"}
+        title={"FLOWViZ: Framework for Phylogenetic Processing"}
         subtitle={"arxiv.org"}
         description={
           <p>
