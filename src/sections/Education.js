@@ -70,11 +70,13 @@ export default function Bio() {
                 application (React.js). I obtained a final grade of 19/20 with
                 this project.
               </p>
-              <u>Technologies:</u>{" "}
-              <b>
-                Kotlin, JavaScript, PostgreSQL, Spring, Android native,
-                React.js.
-              </b>
+              <p>
+                <u>Technologies:</u>{" "}
+                <b>
+                  Kotlin, JavaScript, PostgreSQL, Spring, Android native,
+                  React.js.
+                </b>
+              </p>
             </>
           }
         />

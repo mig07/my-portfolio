@@ -52,7 +52,7 @@ export default function Skills() {
             </h4>
             <LanguageGraph graphData={languageGraphData} />
           </Col>
-          <Col xs={12} md={4} className="mx-4">
+          <Col xs={11} md={5} className="ms-4">
             <Row className="mt-5">
               <Col>
                 <h4>
@@ -103,7 +103,7 @@ export default function Skills() {
                 </h4>
                 <Stack gap={2}>
                   <h6>
-                    <b>Car license</b> - B, B1
+                    <b>Driving license</b> - B, B1
                   </h6>
                 </Stack>
               </Col>
