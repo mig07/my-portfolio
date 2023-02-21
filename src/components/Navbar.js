@@ -39,13 +39,6 @@ export default function NavBar({ children }) {
               <i className="bi bi-linkedin" />
             </Nav.Link>
             <Nav.Link
-              eventkey="email"
-              href="mailto:miguelfpluis@outlook.com"
-              className="mx-2"
-            >
-              <i className="bi bi-envelope-at-fill"></i>
-            </Nav.Link>
-            <Nav.Link
               eventkey="github"
               href="https://github.com/mig07"
               className="mx-2"
@@ -58,6 +51,13 @@ export default function NavBar({ children }) {
               className="mx-2"
             >
               <i className="bi bi-braces" />
+            </Nav.Link>
+            <Nav.Link
+              eventkey="email"
+              href="mailto:miguelfpluis@outlook.com"
+              className="mx-2"
+            >
+              <i className="bi bi-envelope-at-fill"></i>
             </Nav.Link>
             <div className="vr mx-2"></div>
             {children}
