@@ -25,12 +25,17 @@ export default function Bio() {
               <p>
                 My final thesis project was an integration framework for
                 phylogenetic tools, titled{" "}
-                <b>FLOWViZ: Framework for Phylogenetic Processing</b>. This
-                framework allows users to seamlessly bind phylogenetic tools
-                with workflow systems through well-defined contracts, providing
-                a great interoperability among different phylogenetic tools,
-                while supplying workflow building and execution. The framework
-                is composed by a Web Client (React.js), a HTTP server
+                <b>
+                  <a href="https://github.com/mig07/FLOWViZ">
+                    FLOWViZ: Framework for Phylogenetic Processing{" "}
+                    <i class="bi bi-box-arrow-up-right" />
+                  </a>
+                </b>
+                . This framework allows users to seamlessly bind phylogenetic
+                tools with workflow systems through well-defined contracts,
+                providing a great interoperability among different phylogenetic
+                tools, while supplying workflow building and execution. The
+                framework is composed by a Web Client (React.js), a HTTP server
                 (Express.js), both written in JavaScript, while using a
                 non-relational database (MongoDB). These three allowed a
                 successful integration between phylogenetic tools and the Apache
@@ -59,8 +64,10 @@ export default function Bio() {
                 My final project was a group project in which we built a
                 multi-platform application for diabetics and nutrition, titled{" "}
                 <b>
-                  Nutr.io - Multi-platform application for diabetics'
-                  nutritional choices
+                  <a href="https://github.com/davidalb97/PS-Nutr.io">
+                    Nutr.io - Multi-platform application for diabetics'
+                    nutritional choices <i class="bi bi-box-arrow-up-right" />
+                  </a>
                 </b>
                 . It allows users to calculate correct insulin dosages, by
                 selecting specific meals from restaurants around them and by

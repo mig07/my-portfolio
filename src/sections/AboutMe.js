@@ -1,22 +1,14 @@
 import React from "react";
 import Section from "../components/Section";
+import getYearsOfAge from "../util";
 
 export default function About() {
-  // Get years of age from birthday date (mm/dd/yyyy)
-  const getYearsOfAge = (dateOfBirth) => {
-    const birthDayDate = new Date(dateOfBirth);
-    const monthDiff = Date.now() - birthDayDate.getTime();
-    const monthDiffDate = new Date(monthDiff);
-    const year = monthDiffDate.getUTCFullYear();
-    return Math.abs(year - 1970);
-  };
-
   return (
     <Section title="About me">
       <div>
         <p>
-          I am a {getYearsOfAge("07/07/1998")}-year-old software engineer based
-          in Lisbon, Portugal.
+          I am a {getYearsOfAge()}-year-old software engineer based in Lisbon,
+          Portugal.
         </p>
         <p>
           I consider myself a very eager person when it comes to learn new
